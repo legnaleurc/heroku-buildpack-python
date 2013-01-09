@@ -161,7 +161,7 @@ fi
 
 # Install dependencies with Pip.
 puts-step "Installing dependencies using Pip ($PIP_VERSION)"
-/app/.heroku/python/bin/pip install --use-mirrors -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
+/app/.heroku/python/bin/pip install --use-mirrors -U -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
 
 # Django collectstatic support.
 source $BIN_DIR/steps/collectstatic
